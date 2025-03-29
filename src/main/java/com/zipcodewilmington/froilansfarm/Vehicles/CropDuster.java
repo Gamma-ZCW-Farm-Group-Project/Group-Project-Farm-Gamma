@@ -14,7 +14,7 @@ public class CropDuster extends Vehicle implements Aircraft, FarmVehicle  {
     }
 
     public boolean isFlying() {
-        return true;
+        return false;
     }
 
     public void fertilize() {
