@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Edibles.Corn;
+import com.zipcodewilmington.froilansfarm.Edibles.Egg;
 import com.zipcodewilmington.froilansfarm.Edibles.Tomato;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class EdibleTest {
     private Tomato tomato;
     private Corn corn;
+    private Egg egg;
+
 
     @BeforeEach
     void setUp() {
@@ -64,5 +67,11 @@ public class EdibleTest {
         corn.fertilize();
         assertTrue(corn.yield());
         assertTrue(corn.hasBeenHarvested());
+    }
+    @Test
+    void testEggEdibility() {
+        assertTrue(egg.isEdible());
+        egg.fertilized();
+        assertFalse(egg.isEdible());
     }
 }
