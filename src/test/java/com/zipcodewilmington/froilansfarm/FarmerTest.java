@@ -1,4 +1,66 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
+import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
+import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
+import com.zipcodewilmington.froilansfarm.People.Farmer;
+import static org.junit.jupiter.api.Assertions.*;
+
+import com.zipcodewilmington.froilansfarm.People.Person;
+import org.junit.jupiter.api.Test;
+
+
 public class FarmerTest {
+
+    @Test
+    public void testInhertiance(){
+        Person froiland = (Person)(Object)new Farmer();
+
+        assertTrue(froiland instanceof Person);
+    }
+
+    @Test
+    public void testNoiseMakerImplementation(){
+        NoiseMaker froiland = (NoiseMaker)(Object) new Farmer();
+
+        assertTrue(froiland instanceof NoiseMaker);
+    }
+
+    @Test
+    public void testEaterImplementation(){
+        Eater froiland = (Eater)(Object)new Farmer();
+
+        assertTrue(froiland instanceof Eater);
+    }
+
+    @Test
+    public void testRiderImplementation(){
+        Rider froiland = (Rider)(Object)new Farmer();
+
+        assertTrue(froiland instanceof Rider);
+    }
+
+    @Test
+    public void testBotanistImplementation(){
+        Botanist froiland = (Botanist)(Object)new Farmer();
+
+        assertTrue(froiland instanceof Botanist);
+    }
+
+    @Test
+    public void testMakeNoise(){
+        Farmer froiland = new Farmer();
+
+        assertEquals("I'm a farmer", froiland.makeNoise());
+    }
+
+    @Test
+    public void testMount(){
+        Farmer froiland = new Farmer();
+        Horse horse = new Horse();
+        froiland.mount();
+        assertTrue(froiland.mount());
+    }
 }
