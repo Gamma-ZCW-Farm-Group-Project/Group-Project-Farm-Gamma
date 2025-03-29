@@ -1,13 +1,14 @@
 package com.zipcodewilmington.froilansfarm.People;
 
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 
-public class Farmer extends Person implements Rider, NoiseMaker, Botanist, Eater {
+import java.util.ArrayList;
 
-    private boolean isRiding = false;
+public class Farmer extends Person implements Rider, NoiseMaker, Botanist, Eater {
 
     @Override
     public void plant() {

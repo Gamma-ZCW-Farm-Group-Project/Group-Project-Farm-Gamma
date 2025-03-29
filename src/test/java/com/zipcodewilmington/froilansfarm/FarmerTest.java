@@ -1,15 +1,17 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 import com.zipcodewilmington.froilansfarm.People.Farmer;
-import static org.junit.jupiter.api.Assertions.*;
 
+import static org.junit.jupiter.api.Assertions.*;
 import com.zipcodewilmington.froilansfarm.People.Person;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 
 
 public class FarmerTest {
@@ -59,8 +61,24 @@ public class FarmerTest {
     @Test
     public void testMount(){
         Farmer froiland = new Farmer();
-        Horse horse = new Horse();
-        froiland.mount();
-        assertTrue(froiland.mount());
+        boolean mounted = false;
+        mounted = froiland.mount();
+        assertTrue(mounted);
+    }
+
+    @Test
+    public void testDismount(){
+        Farmer froiland = new Farmer();
+        boolean mounted = true;
+        mounted = froiland.dismount();
+        assertFalse(mounted);
+    }
+
+    @Test
+    public void testEat(){
+        Farmer froiland = new Farmer();
+        ArrayList<Edible> farmerFood = new ArrayList<>();
+        froiland.eat();
+
     }
 }
