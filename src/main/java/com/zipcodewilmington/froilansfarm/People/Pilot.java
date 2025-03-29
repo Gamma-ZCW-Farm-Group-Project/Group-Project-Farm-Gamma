@@ -19,11 +19,11 @@ public class Pilot extends Person implements Rider, Eater, NoiseMaker{
 
     @Override
     public boolean mount() {
-
+        return true;
     }
 
     @Override
     public boolean dismount() {
-
+        return false;
     }
 }
