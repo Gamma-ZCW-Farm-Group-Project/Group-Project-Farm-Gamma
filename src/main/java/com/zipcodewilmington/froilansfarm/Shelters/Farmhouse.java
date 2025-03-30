@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.People.Pilot;
 
 import java.util.ArrayList;
 
-public class Farmhouse {
+public class Farmhouse extends Shelter{
     public static ArrayList<Person> people = new ArrayList<Person>();
 
     public void Person(){

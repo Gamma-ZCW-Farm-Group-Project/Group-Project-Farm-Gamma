@@ -2,6 +2,6 @@ package com.zipcodewilmington.froilansfarm.Shelters;
 
 import java.util.ArrayList;
 
-public abstract super class Shelter {
+public abstract class Shelter {
     ArrayList<>
 }
