@@ -25,13 +25,12 @@ public class Horse extends Stable implements Eater, NoiseMaker, Rider {
 
     @Override
     public boolean mount() {
-        //Needs boolean to be able to mount
-        return false;
+        return true;
     }
 
     @Override
     public boolean dismount() {
         //Needs boolean to be able to dismount
-        return false;
+        return true;
     }
 }
