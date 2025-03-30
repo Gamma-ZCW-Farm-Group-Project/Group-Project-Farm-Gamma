@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Edibles;
 
-public class CornStalk {
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+
+public class CornStalk implements Produce {
     public boolean hasBeenFertilized() {
         return false;
     }
@@ -14,7 +16,7 @@ public class CornStalk {
     }
 
     public boolean yield() {
-        return false;
 
+        return false;
     }
 }

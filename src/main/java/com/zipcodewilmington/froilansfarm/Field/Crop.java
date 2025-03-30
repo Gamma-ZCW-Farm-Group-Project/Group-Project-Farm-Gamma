@@ -1,4 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Field;
 
-public class Crop {
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+
+public class Crop implements Produce {
+    @Override
+    public boolean yield() {
+
+        return false;
+    }
 }
