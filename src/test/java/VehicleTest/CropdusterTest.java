@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package VehicleTest;
 
 import com.zipcodewilmington.froilansfarm.Vehicles.CropDuster;
 import org.junit.jupiter.api.BeforeEach;

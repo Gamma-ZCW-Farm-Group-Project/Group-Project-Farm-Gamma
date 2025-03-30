@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Edibles;
 
-public class Corn {
+public class CornStalk {
     public boolean hasBeenFertilized() {
         return false;
     }

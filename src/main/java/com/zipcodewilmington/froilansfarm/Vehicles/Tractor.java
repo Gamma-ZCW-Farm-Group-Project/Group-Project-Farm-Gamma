@@ -1,6 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public class Tractor {
+import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Interfaces.RideAble;
+
+public class Tractor implements FarmVehicle, NoiseMaker, RideAble {
     public void operate() {
     }
 

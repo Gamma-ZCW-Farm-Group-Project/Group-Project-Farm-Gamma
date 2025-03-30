@@ -1,8 +1,8 @@
-package com.zipcodewilmington.froilansfarm;
+package FieldTest;
 
-import com.zipcodewilmington.froilansfarm.Edibles.Corn;
+import com.zipcodewilmington.froilansfarm.Edibles.CornStalk;
 import com.zipcodewilmington.froilansfarm.Edibles.Egg;
-import com.zipcodewilmington.froilansfarm.Edibles.Tomato;
+import com.zipcodewilmington.froilansfarm.Edibles.TomatoPlant;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,15 +10,15 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class EdibleTest {
-    private Tomato tomato;
-    private Corn corn;
+    private TomatoPlant tomato;
+    private CornStalk corn;
     private Egg egg;
 
 
     @BeforeEach
     void setUp() {
-        tomato = new Tomato();
-        corn = new Corn();
+        tomato = new TomatoPlant();
+        corn = new CornStalk();
     }
 
     @Test

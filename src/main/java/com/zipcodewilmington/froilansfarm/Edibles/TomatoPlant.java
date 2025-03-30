@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Edibles;
 
-public class Tomato {
+public class TomatoPlant {
     public boolean hasBeenFertilized() {
         return false;
     }
