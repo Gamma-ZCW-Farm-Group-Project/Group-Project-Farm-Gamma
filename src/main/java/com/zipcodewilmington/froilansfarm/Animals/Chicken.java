@@ -19,7 +19,7 @@ public class Chicken extends ChickenCoop implements Eater, NoiseMaker, Produce {
     }
 
     public String makeNoise(){
-        return ("buck buck buckooock!");
+        return "buck buck buckooock!";
     }
 
 
