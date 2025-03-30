@@ -8,7 +8,15 @@ import com.zipcodewilmington.froilansfarm.People.Pilot;
 import java.util.ArrayList;
 
 public class Farmhouse extends Shelter{
-    public static ArrayList<Person> people = new ArrayList<Person>();
+    private ArrayList<Person> people;
+    private ArrayList<Farmer> farmer;
+    private ArrayList<Pilot>  pilot;
+
+    public Farmhouse() {
+        this.people = new ArrayList<>();
+        this.farmer = new ArrayList<>();
+        this.pilot = new ArrayList<>();
+    }
 
     public void Person(){
         this.people = new ArrayList<>();
@@ -19,19 +27,19 @@ public class Farmhouse extends Shelter{
     }
 
     public void Farmer(){
-        this.people = new ArrayList<>();
+        this.farmer = new ArrayList<>();
     }
 
-    public ArrayList<Person> getFarmer(){
-        return people;
+    public ArrayList<Farmer> getFarmer(){
+        return farmer;
     }
 
     public void Pilot(){
-        this.people = new ArrayList<>();
+        this.pilot = new ArrayList<>();
     }
 
-    public ArrayList<Person> getPilot(){
-        return people;
+    public ArrayList<Pilot> getPilot(){
+        return pilot;
     }
 
 }
