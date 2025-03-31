@@ -23,7 +23,7 @@ public class Chicken implements Eater, NoiseMaker, Produce {
 
 
     @Override
-    public void yield() {
+    public void yield(){
 
     }
 }
