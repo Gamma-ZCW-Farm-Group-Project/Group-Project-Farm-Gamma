@@ -4,6 +4,8 @@ import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class HorseTest {
 
     Horse horse = new Horse();
@@ -21,13 +23,13 @@ public class HorseTest {
     void testMount(){
         boolean expected = true;
         boolean actual = horse.mount();
-        Assertions.assertEquals(expected, actual);
+        assertTrue(expected, String.valueOf(actual));
     }
 
     @Test
     void testDismount(){
         boolean expected = true;
         boolean actual = horse.dismount();
-        Assertions.assertEquals(expected, actual);
+        assertTrue(expected, String.valueOf(actual));
     }
 }

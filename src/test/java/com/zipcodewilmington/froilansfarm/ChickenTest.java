@@ -10,7 +10,7 @@ public class ChickenTest {
     Chicken chicken = new Chicken();
 
     @Test
-    void ChickenMakeNoiseTest(){
+    void chickenMakeNoiseTest(){
         String expected = "buck buck buckooock!";
 
         String actual = chicken.makeNoise();
@@ -18,5 +18,16 @@ public class ChickenTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    void chickenYieldsEggTest(){
+        //Given
+        Chicken chicken = new Chicken();
+        boolean isFertilized = false;
+
+
+        //When
+
+        //Then
+    }
 
 }
