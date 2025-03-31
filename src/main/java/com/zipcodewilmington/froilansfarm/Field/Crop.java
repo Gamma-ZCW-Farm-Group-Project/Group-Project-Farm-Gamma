@@ -4,7 +4,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class Crop implements Produce {
     @Override
-    public void yield() {
+    public boolean yield() {
 
         return false;
     }

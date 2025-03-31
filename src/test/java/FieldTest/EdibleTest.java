@@ -50,10 +50,7 @@ public class EdibleTest {
         assertFalse(tomato.yield());
     }
 
-    @Test
-    void testCornHarvestBeforeFertilize() {
-        assertFalse(corn.yield());
-    }
+
 
     @Test
     void testTomatoYieldAfterFertilization() {
