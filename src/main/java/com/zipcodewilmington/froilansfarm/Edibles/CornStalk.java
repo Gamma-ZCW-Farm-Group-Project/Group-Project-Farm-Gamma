@@ -15,8 +15,8 @@ public class CornStalk implements Produce {
     public void fertilize() {
     }
 
-    public boolean yield() {
+    public void yield() {
 
-        return false;
+        //return false;
     }
 }

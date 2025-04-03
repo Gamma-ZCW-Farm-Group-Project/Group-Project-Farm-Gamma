@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
 public interface Produce {
-    public boolean yield();
+    public void yield();
 }
