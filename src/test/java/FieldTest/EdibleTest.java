@@ -1,6 +1,7 @@
 package FieldTest;
 
 import com.zipcodewilmington.froilansfarm.Edibles.Egg;
+import com.zipcodewilmington.froilansfarm.Field.CornStalk;
 import com.zipcodewilmington.froilansfarm.Field.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Field.Crop;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,14 +12,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class EdibleTest {
     private TomatoPlant tomato;
-    private Crop.CornStalk corn;
+    private CornStalk corn;
     private Egg egg;
 
 
     @BeforeEach
     void setUp() {
         tomato = new TomatoPlant();
-        corn = new Crop.CornStalk();
+        corn = new CornStalk();
     }
 
     @Test
