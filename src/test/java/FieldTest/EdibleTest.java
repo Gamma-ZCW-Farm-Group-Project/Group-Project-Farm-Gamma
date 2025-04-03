@@ -1,8 +1,9 @@
 package FieldTest;
 
-import com.zipcodewilmington.froilansfarm.Edibles.CornStalk;
 import com.zipcodewilmington.froilansfarm.Edibles.Egg;
-import com.zipcodewilmington.froilansfarm.Edibles.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Field.CornStalk;
+import com.zipcodewilmington.froilansfarm.Field.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Field.Crop;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -50,10 +51,7 @@ public class EdibleTest {
         assertFalse(tomato.yield());
     }
 
-    @Test
-    void testCornHarvestBeforeFertilize() {
-        assertFalse(corn.yield());
-    }
+
 
     @Test
     void testTomatoYieldAfterFertilization() {

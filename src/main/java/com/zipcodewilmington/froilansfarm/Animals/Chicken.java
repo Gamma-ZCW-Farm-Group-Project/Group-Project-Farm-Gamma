@@ -8,9 +8,7 @@ import com.zipcodewilmington.froilansfarm.Shelters.ChickenCoop;
 
 import java.util.ArrayList;
 
-public class Chicken extends ChickenCoop implements Eater, NoiseMaker, Produce {
-
-
+public class Chicken implements Eater, NoiseMaker, Produce {
     public void chickenList(ChickenCoop obj, Chicken chickenNum){
         ArrayList<Chicken> listOfChickens = obj.getNumOfChickens();
         listOfChickens.add(chickenNum);
@@ -20,7 +18,7 @@ public class Chicken extends ChickenCoop implements Eater, NoiseMaker, Produce {
     }
 
     public String makeNoise(){
-        return "buck buck buckooock!";
+        return null;
     }
 
 
