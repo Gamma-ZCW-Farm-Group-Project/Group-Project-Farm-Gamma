@@ -18,11 +18,8 @@ public class Chicken implements Eater, NoiseMaker, Produce {
     }
 
     public String makeNoise(){
-        return null;
+        return "buck buck buckooock!";
     }
-
-
-    @Override
 
     public void yield() {
         //eggArrLst.add();
