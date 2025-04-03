@@ -1,8 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Field;
 
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
-public class Crop implements Produce {
+import java.util.ArrayList;
+
+public class Crop extends CropRow implements Produce {
     private boolean hasBeenFertalized= false;
     private boolean hasBeenHarvested= false;
 
@@ -20,11 +23,8 @@ public class Crop implements Produce {
     public boolean hasBeenHarvested() {
         return hasBeenHarvested;
     }
+    public void yield(ArrayList<Edible> corn) {
 
-    @Override
-    public boolean yield() {
-
-        return false;
     }
 
 }

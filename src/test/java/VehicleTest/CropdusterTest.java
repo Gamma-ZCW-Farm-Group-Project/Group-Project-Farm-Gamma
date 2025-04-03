@@ -1,5 +1,8 @@
 package VehicleTest;
 
+import com.zipcodewilmington.froilansfarm.Field.CornStalk;
+import com.zipcodewilmington.froilansfarm.Field.CropRow;
+import com.zipcodewilmington.froilansfarm.Field.Field;
 import com.zipcodewilmington.froilansfarm.Vehicles.CropDuster;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
@@ -12,10 +15,17 @@ public class CropdusterTest {
     class CropDusterTest {
 
         private CropDuster cropDuster;
+        private Field field;
+
 
         @BeforeEach
         void setUp() {
             cropDuster = new CropDuster();
+            field = new Field();
+
+            CropRow cropRow = new CropRow();
+            cropRow.getCrops(new CornStalk());
+            cropRow.getCrops(new CornStalk());
         }
 
         @Test

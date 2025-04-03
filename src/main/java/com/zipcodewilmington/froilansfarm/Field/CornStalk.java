@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Field;
 
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+
+import java.util.ArrayList;
 
 public class CornStalk implements Produce {
         public boolean hasBeenFertilized() {
@@ -15,9 +18,8 @@ public class CornStalk implements Produce {
         public void fertilize() {
         }
 
-        public boolean yield() {
+        public void yield(ArrayList<Edible> corn) {
 
-            return false;
         }
     }
 
