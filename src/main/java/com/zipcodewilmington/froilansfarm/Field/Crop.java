@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 import java.util.ArrayList;
 
-public class Crop extends CropRow implements Produce {
+public class Crop implements Produce {
     private boolean hasBeenFertalized= false;
     private boolean hasBeenHarvested= false;
 

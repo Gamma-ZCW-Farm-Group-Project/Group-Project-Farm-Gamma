@@ -17,18 +17,4 @@ public class ChickenTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
-    @Test
-    void chickenYieldsEggTest(){
-        //Given
-        Chicken chicken = new Chicken();
-        boolean isFertilized = false;
-
-
-        //When
-
-
-        //Then
-    }
-
 }
