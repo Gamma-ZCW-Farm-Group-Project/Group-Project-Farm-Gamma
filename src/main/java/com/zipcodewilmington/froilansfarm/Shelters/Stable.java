@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import java.util.ArrayList;
 
 public class Stable extends Shelter{
-    public static ArrayList<Horse> numOfHorse = new ArrayList<Horse>();
+    public static ArrayList<Horse> numOfHorse = new ArrayList<Horse>(10);
 
     public void Horse(){
         this.numOfHorse = new ArrayList<>();

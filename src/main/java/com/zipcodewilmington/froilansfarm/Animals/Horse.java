@@ -8,9 +8,9 @@ import com.zipcodewilmington.froilansfarm.Shelters.Stable;
 import java.util.ArrayList;
 
 public class Horse extends Stable implements Eater, NoiseMaker, Rider {
-    public void horseList(Stable obj, Horse horseNum){
+    public void horseList(Stable obj, Horse horse){
         ArrayList<Horse> listOfHorse = obj.getNumOfHorse();
-        listOfHorse.add(horseNum);
+        listOfHorse.add(horse);
     }
 
     @Override
