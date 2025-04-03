@@ -5,14 +5,31 @@ import java.util.Objects;
 
 public abstract class Shelter {
 
-    private ArrayList<Objects> shelters;
+    private Object farmHouse;
+    private ArrayList<Objects> chickenCoops;
+    private ArrayList<Objects> stables;
 
-    public void Shelter(){
-        this.shelters = new ArrayList<>();
+    public void setFarmHouse(){
+        this.farmHouse = farmHouse;
     }
 
-    public ArrayList<Objects> getShelters(){
-        return shelters;
+    public Object getFarmHouse() {
+        return farmHouse;
     }
 
+    public void setChickenCoops(){
+        this.chickenCoops = new ArrayList<>(4);
+    }
+
+    public ArrayList<Objects> getChickenCoops(){
+        return chickenCoops;
+    }
+
+    public void setStables(){
+        this.stables = new ArrayList<>(3);
+    }
+
+    public ArrayList<Objects> getStables(){
+        return stables;
+    }
 }

@@ -10,14 +10,12 @@ import com.zipcodewilmington.froilansfarm.Shelters.ChickenCoop;
 
 import java.util.ArrayList;
 
-public class Chicken implements Eater, NoiseMaker, Produce {
+public class Chicken implements NoiseMaker, Produce {
     public void chickenList(ChickenCoop obj, Chicken chickenNum){
         ArrayList<Chicken> listOfChickens = obj.getNumOfChickens();
         listOfChickens.add(chickenNum);
     }
 
-    public void eat(){
-    }
 
     public String makeNoise(){
         return "buck buck buckooock!";
