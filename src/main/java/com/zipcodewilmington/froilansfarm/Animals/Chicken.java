@@ -26,13 +26,7 @@ public class Chicken extends ChickenCoop implements Eater, NoiseMaker, Produce {
 
     @Override
 
-    public boolean yield() {
-        boolean isFertilized = true;
-        if (!isFertilized){
-            return ;
-        }
-
-
-    public void yield(){
+    public void yield() {
+        //eggArrLst.add();
     }
 }
