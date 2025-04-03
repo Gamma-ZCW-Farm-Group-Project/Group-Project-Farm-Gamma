@@ -16,7 +16,7 @@ public class Farmer extends Person implements Rider, NoiseMaker, Botanist, Eater
     }
 
     @Override
-    public void eat() {
+    public void eat(ArrayList<Edible> e) {
 
     }
 
