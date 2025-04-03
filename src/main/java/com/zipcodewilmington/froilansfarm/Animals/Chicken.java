@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 
 
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
+import com.zipcodewilmington.froilansfarm.Edibles.Egg;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
@@ -21,7 +23,8 @@ public class Chicken implements Eater, NoiseMaker, Produce {
         return "buck buck buckooock!";
     }
 
-    public void yield() {
-        //eggArrLst.add();
+    public void yield(ArrayList<Edible> e) {
+        Egg egg = new Egg();
+        e.add(egg);
     }
 }
