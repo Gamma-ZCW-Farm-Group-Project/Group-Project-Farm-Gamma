@@ -9,7 +9,7 @@ public class TomatoPlant {
         return false;
     }
 
-    public void fertilize() {
+    public void fertalize() {
 
     }
 

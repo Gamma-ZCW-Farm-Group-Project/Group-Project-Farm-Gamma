@@ -1,40 +1,43 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-import com.zipcodewilmington.froilansfarm.Field.CornStalk;
-import com.zipcodewilmington.froilansfarm.Field.Crop;
-import com.zipcodewilmington.froilansfarm.Field.CropRow;
-import com.zipcodewilmington.froilansfarm.Interfaces.Aircraft;
-import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
-import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
-import com.zipcodewilmington.froilansfarm.Interfaces.RideAble;
+//import com.zipcodewilmington.froilansfarm.Field.CornStalk;
+//import com.zipcodewilmington.froilansfarm.Field.Crop;
+//import com.zipcodewilmington.froilansfarm.Field.CropRow;
+//import com.zipcodewilmington.froilansfarm.Field.Field;
+//import com.zipcodewilmington.froilansfarm.Interfaces.Aircraft;
+//import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+//import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
+//import com.zipcodewilmington.froilansfarm.Interfaces.RideAble;
 
-public class CropDuster extends Vehicle implements Aircraft, FarmVehicle, RideAble, NoiseMaker {
-    private boolean flying= false;
-
-    @Override
-    public void fly() {
-        flying=true;
-    }
-
-    @Override
-    public void operate() {
-        flying=false;
-    }
-
-    public boolean isFlying() {
-        return flying;
-    }
-
-    public void fertilize() {
-        for(CropRow row : field.getCropRows()){
-            for(Crop crop: row.getCrops(new CornStalk())){
-                crop.hasBeenFertalized();
-            }
-        }
-    }
-
-    @Override
-    public String makeNoise() {
-        return "";
-    }
-}
+//public class CropDuster extends Vehicle implements Aircraft, FarmVehicle, RideAble, NoiseMaker {
+//    private boolean flying= false;
+//
+//    @Override
+//    public void fly() {
+//        flying=true;
+//    }
+//
+//    @Override
+//    public void operate() {
+//        flying=false;
+//    }
+//
+//    public boolean isFlying() {
+//        return flying;
+//    }
+//
+//    public void fertilize(Field field) {
+//        for (CropRow row : field.getCropRows()) {
+//            for (Crop crop : row.getCrops()) {
+//                if (crop instanceof Crop) {  // Fertilize only CornStalk crops
+//                    crop.fertalize();  // Call fertilize on CornStalk
+//                }
+//            }
+//        }
+//    }
+//
+//    @Override
+//    public String makeNoise() {
+//        return "";
+//    }
+//}

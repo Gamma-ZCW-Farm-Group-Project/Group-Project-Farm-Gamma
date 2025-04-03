@@ -8,32 +8,58 @@ import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.RideAble;
 
 public class Tractor implements FarmVehicle, NoiseMaker, RideAble {
-    private boolean isOperating= true;
+    private boolean isOperating = true;
+    private boolean isHarvesting = false;
+    private boolean isInUse = false;
+    private String operator;
 
-    public void operate() {
-        isOperating=true;
+    // Constructor for Tractor class
+    public Tractor() {
+        this.isOperating = true;
+        this.isHarvesting = false;
+        this.isInUse = false;
+        this.operator = null;
     }
 
-    public void isOperating(Field field) {
-        for(CropRow row : field.getCropRow){
-            for(Crop crop: row.getCrops(new CornStalk())){
-                crop.hasBeenHarvested();
+    // Check if the tractor is harvesting any crops (returns true if harvesting)
+    public boolean isHarvesting() {
+        return isHarvesting;
+    }
+
+    // Start harvesting by setting the state to isHarvesting = true
+    public void harvest() {
+        isHarvesting = true;
+        isOperating = true;
+    }
+
+    // Ride method to assign an operator and set the tractor to in-use
+    public Object ride(String operatorName) {
+        this.operator = operatorName;
+        this.isInUse = true;
+        return operatorName;
+    }
+
+    // Tractor makes a noise ("Vroom")
+    public String makeNoise() {
+        return "Vroom";
+    }
+
+    // Operate method to check if tractor is operating (in use)
+    @Override
+    public void operate() {
+        isOperating = true; // Tractor is operating
+    }
+
+    // Check if any crop in the field has been harvested (returns true if at least one crop is harvested)
+    public boolean isOperating(Field field) {
+        // Logic to check if the tractor is operating based on the field conditions (e.g., harvest status)
+        for (CropRow row : field.getCropRows()) {
+            for (Crop crop : row.getCrops()) {
+                if (crop.hasBeenHarvested()) {
+                    return false;
+                }
             }
         }
-    }
-
-    public void harvest() {
-    }
-
-    public boolean isHarvesting() {
-        return false;
-    }
-
-    public Object ride() {
-        return null;
-    }
-
-    public String makeNoise() {
-        return "";
+        return true;
     }
 }

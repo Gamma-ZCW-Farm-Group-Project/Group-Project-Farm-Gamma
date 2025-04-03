@@ -4,19 +4,20 @@ import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Crop implements Produce {
     private boolean hasBeenFertalized= false;
     private boolean hasBeenHarvested= false;
 
-    public void Fertalized(){
+    public void fertalize(){
         hasBeenFertalized=true;
     }
     public void Harvested(){
         hasBeenHarvested=true;
     }
 
-    public boolean hasBeenFertalized() {
+    public boolean hasBeenFertilized() {
         return hasBeenFertalized;
     }
 
