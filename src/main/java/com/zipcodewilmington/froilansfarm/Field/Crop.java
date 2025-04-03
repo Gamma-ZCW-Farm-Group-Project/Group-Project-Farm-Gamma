@@ -22,9 +22,9 @@ public class Crop implements Produce {
     }
 
     @Override
-    public boolean yield() {
+    public void yield() {
 
-        return false;
+
     }
 
 }

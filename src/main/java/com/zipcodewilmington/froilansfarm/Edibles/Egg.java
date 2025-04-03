@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Edibles;
 
-public class Egg {
+public class Egg extends Edible {
     public boolean isEdible() {
         return false;
     }
