@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.Field;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
-public class Crop implements Produce {
+public class Crop{
     private boolean hasBeenFertalized= false;
     private boolean hasBeenHarvested= false;
 
@@ -21,10 +21,10 @@ public class Crop implements Produce {
         return hasBeenHarvested;
     }
 
-    @Override
-    public void yield() {
-
-
-    }
+//    @Override
+//    public void yield() {
+//
+//
+//    }
 
 }
