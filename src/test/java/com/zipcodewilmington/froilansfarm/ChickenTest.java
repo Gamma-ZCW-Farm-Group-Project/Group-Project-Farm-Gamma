@@ -1,8 +1,12 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Animals.Chicken;
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
+import com.zipcodewilmington.froilansfarm.Edibles.Egg;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 
 
 public class ChickenTest {

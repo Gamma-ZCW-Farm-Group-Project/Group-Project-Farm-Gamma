@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 
+import com.zipcodewilmington.froilansfarm.Edibles.Corn;
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
@@ -8,14 +10,14 @@ import com.zipcodewilmington.froilansfarm.Shelters.Stable;
 import java.util.ArrayList;
 
 public class Horse extends Animal implements Eater, NoiseMaker, Rider {
-    public void horseList(Stable obj, Horse horse){
-        ArrayList<Horse> listOfHorse = obj.getNumOfHorse();
-        listOfHorse.add(horse);
-    }
 
     @Override
-    public void eat() {
-
+    public void eat(ArrayList<Edible> horseFood) {
+        Horse horse = new Horse();
+        Edible edible = new Edible();
+        Corn corn = new Corn();
+        horseFood.add(corn);
+        horse.eat(corn);
     }
 
     @Override
@@ -30,7 +32,6 @@ public class Horse extends Animal implements Eater, NoiseMaker, Rider {
 
     @Override
     public boolean dismount() {
-        //Needs boolean to be able to dismount
         return true;
     }
 }

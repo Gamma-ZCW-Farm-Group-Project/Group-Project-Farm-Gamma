@@ -11,9 +11,9 @@ import com.zipcodewilmington.froilansfarm.Shelters.ChickenCoop;
 import java.util.ArrayList;
 
 public class Chicken implements NoiseMaker, Produce {
-    public void chickenList(ChickenCoop obj, Chicken chicken){
+    public void chickenList(ChickenCoop obj, Chicken chickenNum){
         ArrayList<Chicken> listOfChickens = obj.getNumOfChickens();
-        listOfChickens.add(chicken);
+        listOfChickens.add(chickenNum);
     }
 
 
