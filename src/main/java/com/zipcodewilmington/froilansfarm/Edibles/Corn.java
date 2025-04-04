@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.Edibles;
 
 import java.util.ArrayList;
 
-public class Corn {
+public class Corn extends Edible {
     private boolean isFertilized;
     private boolean isHarvested;
     public Corn(){}
