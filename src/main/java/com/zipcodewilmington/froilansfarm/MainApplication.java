@@ -18,12 +18,8 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
  * Created by leon on 2/26/18.
  */
 public class MainApplication {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         MainApplication mainApplication = new MainApplication();
-        mainApplication.simulateWeek();
-    }
-
-    public void setUpObjects(){
         Farmer froiland = new Farmer();
         Pilot froilanda = new Pilot();
         CropDuster cropDuster = new CropDuster();
@@ -34,16 +30,17 @@ public class MainApplication {
         Field field = new Field();
         CornStalk cornStalk = new CornStalk();
         TomatoPlant tomatoPlant = new TomatoPlant();
-    }
-
-    public void oneDaySimulate(){
-        setUpObjects();
-    }
-
-    public void simulateWeek(){
-        for (int i = 0; i < 7; i++){
-            oneDaySimulate();
+        int counter = 1;
+        while (counter <= 7){
+            mainApplication.oneDaySimulate(froiland, froilanda, cropDuster, tractor, farmhouse, stable, chickenCoop, field, cornStalk, tomatoPlant);
         }
     }
+
+
+
+    public void oneDaySimulate(Farmer froiland, Pilot froilanda, CropDuster cropDuster, Tractor tractor, Farmhouse farmhouse, Stable stable, ChickenCoop chickenCoop, Field field, CornStalk cornStalk, TomatoPlant tomatoPlant) {
+
+    }
+
 
 }
