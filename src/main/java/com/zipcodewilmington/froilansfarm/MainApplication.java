@@ -35,11 +35,12 @@ public class MainApplication {
         CornStalk cornStalk = new CornStalk();
         TomatoPlant tomatoPlant = new TomatoPlant();
         ArrayList<Corn> cornList = new ArrayList<>();
-
         ArrayList<Tomato> tomatoList = new ArrayList<>();
+        ArrayList<Egg> eggList = new ArrayList<>();
+
         int counter = 1;
         while (counter <= 7){
-            mainApplication.oneDaySimulate(froiland, froilanda, cropDuster, tractor, farmhouse, stable, chickenCoop, field, cornStalk, tomatoPlant);
+            mainApplication.oneDaySimulate(froiland, froilanda, cropDuster, tractor, farmhouse, stable, chickenCoop, field, cornStalk, tomatoPlant, cornList, tomatoList, eggList);
 
             mainApplication.oneDaySimulate(froiland, froilanda, cropDuster, tractor, farmhouse, stable, chickenCoop, field, cornStalk, tomatoPlant, cornList, tomatoList, eggList);
             mainApplication.updateConsole(counter, froiland, froilanda, cropDuster, tractor, farmhouse, stable, chickenCoop, field, cornStalk, tomatoPlant, cornList, tomatoList, eggList);
