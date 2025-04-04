@@ -12,7 +12,7 @@ public class Pilot extends Person implements Rider, Eater, NoiseMaker{
 
     @Override
     public void eat(ArrayList<Edible> e) {
-        
+        e.remove(e.size()  - 1);
     }
 
     @Override

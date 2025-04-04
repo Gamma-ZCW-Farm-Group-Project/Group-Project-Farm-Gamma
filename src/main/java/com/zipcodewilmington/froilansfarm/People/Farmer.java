@@ -19,7 +19,7 @@ public class Farmer extends Person implements Rider, NoiseMaker, Botanist, Eater
 
     @Override
     public void eat(ArrayList<Edible> e) {
-
+        e.remove(e.size() - 1);
     }
 
     @Override
