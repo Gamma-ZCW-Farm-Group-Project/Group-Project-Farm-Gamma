@@ -3,21 +3,19 @@ package com.zipcodewilmington.froilansfarm.Animals;
 
 import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Edibles.Egg;
-import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
-import com.zipcodewilmington.froilansfarm.Shelters.ChickenCoop;
 
 import java.util.ArrayList;
 
 public class Chicken extends Animal implements NoiseMaker, Produce {
-    private boolean fertilized = false;
+    private boolean hasBeenFertilized = false;
 
     public void fertilize() {
-        this.fertilized = true;
+        this.hasBeenFertilized = true;
     }
-    public boolean isFertilized(){
-        return fertilized;
+    public boolean isHasBeenFertilized(){
+        return hasBeenFertilized;
     }
 
     public String makeNoise(){
@@ -26,7 +24,7 @@ public class Chicken extends Animal implements NoiseMaker, Produce {
 
     public void yield(ArrayList<Edible> e) {
         Egg egg = new Egg();
-        if (!fertilized) {
+        if (!hasBeenFertilized) {
             e.add(egg);
         }
     }

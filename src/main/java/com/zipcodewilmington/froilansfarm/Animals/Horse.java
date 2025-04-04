@@ -22,15 +22,12 @@ public class Horse extends Animal implements Eater, NoiseMaker, Rider {
 
     @Override
     public boolean dismount() {
-        //Needs boolean to be able to dismount
         return true;
     }
 
     @Override
     public void eat(ArrayList<Edible> e) {
         Corn corn = new Corn();
-        e.remove(corn);
-        e.remove(corn);
         e.remove(corn);
     }
 }
