@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
@@ -8,6 +9,8 @@ import com.zipcodewilmington.froilansfarm.People.Farmer;
 import com.zipcodewilmington.froilansfarm.People.Person;
 import com.zipcodewilmington.froilansfarm.People.Pilot;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -62,6 +65,16 @@ public class PilotTest {
         boolean mounted = true;
         mounted = froilanda.dismount();
         assertFalse(mounted);
+    }
+
+    @Test
+    public void testEat(){
+        Farmer froilanda = new Farmer();
+        ArrayList<Edible> farmerFood = new ArrayList<>();
+        Edible edible = new Edible();
+        farmerFood.add(edible);
+        froilanda.eat(farmerFood);
+        assertEquals(farmerFood.size(), 0);
     }
 
 }

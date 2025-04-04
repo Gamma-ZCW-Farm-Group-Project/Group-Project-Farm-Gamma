@@ -83,6 +83,11 @@ public class FarmerTest {
         Edible edible = new Edible();
         farmerFood.add(edible);
         froiland.eat(farmerFood);
-        assertEquals(farmerFood.get(0), null);
+        assertEquals(farmerFood.size(), 0);
+    }
+
+    @Test
+    public void testPlant(){
+
     }
 }

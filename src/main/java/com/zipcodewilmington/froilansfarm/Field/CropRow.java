@@ -20,9 +20,9 @@ public class CropRow {
 
         // Get all the crops in this row
         public List<Crop> getCrops() {
-            return crops;
-        }
 
+        return crops;
+        }
         public void fertilizeAll() {
             for (Crop crop : crops) {
                 crop.fertilize();
