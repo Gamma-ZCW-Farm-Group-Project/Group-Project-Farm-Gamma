@@ -16,14 +16,18 @@ public class CornStalk extends Crop {
     public void harvested() {
         this.hasBeenHarvested = true;
     }
-
+    public boolean hasBeenHarvested(){
+        return hasBeenHarvested;
+    }
     // Fertilize the crop
-    public void fertalize() {
+    public void fertilize() {
         this.fertilized = true;
     }
-
+    public boolean isFertilized(){
+        return fertilized;
+    }
     // Yield corn (add it to the passed ArrayList)
-    public void yield(ArrayList<Edible> corn) {
+    public void yeild(ArrayList<Edible> corn) {
         if (!hasBeenHarvested&&fertilized) {
             corn.add(new Edible());  // Assuming Corn is a subclass of Edible
         }
