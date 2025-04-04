@@ -30,9 +30,10 @@ public class MainApplication {
         Field field = new Field();
         CornStalk cornStalk = new CornStalk();
         TomatoPlant tomatoPlant = new TomatoPlant();
-        int counter = 1;
-        while (counter <= 7){
+        int day=0;
+        while (day <= 7){
             mainApplication.oneDaySimulate(froiland, froilanda, cropDuster, tractor, farmhouse, stable, chickenCoop, field, cornStalk, tomatoPlant);
+            day++;
         }
     }
 
