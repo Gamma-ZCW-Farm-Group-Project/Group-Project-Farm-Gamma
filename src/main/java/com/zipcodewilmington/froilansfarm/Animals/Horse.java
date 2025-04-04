@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 
+import com.zipcodewilmington.froilansfarm.Edibles.Corn;
 import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
@@ -13,11 +14,6 @@ public class Horse extends Animal implements Eater, NoiseMaker, Rider {
         ArrayList<Horse> listOfHorse = obj.getNumOfHorse();
         listOfHorse.add(horse);
     }
-
-//    @Override
-//    public void eat() {
-//
-//    }
 
     @Override
     public String makeNoise() {
@@ -37,6 +33,9 @@ public class Horse extends Animal implements Eater, NoiseMaker, Rider {
 
     @Override
     public void eat(ArrayList<Edible> e) {
-
+        Corn corn = new Corn();
+        e.remove(corn);
+        e.remove(corn);
+        e.remove(corn);
     }
 }

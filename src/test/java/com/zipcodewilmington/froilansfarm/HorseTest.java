@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import com.zipcodewilmington.froilansfarm.Edibles.Corn;
 import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.People.Farmer;
 import org.junit.jupiter.api.Assertions;
@@ -41,8 +42,8 @@ public class HorseTest {
     public void testEat() {
         Horse horse = new Horse();
         ArrayList<Edible> horseFood = new ArrayList<>();
-        Edible edible = new Edible();
-        horseFood.add(edible);
+        Corn corn = new Corn();
+        horseFood.add(corn);
         horse.eat(horseFood);
         assertEquals(horseFood.get(0), null);
     }
