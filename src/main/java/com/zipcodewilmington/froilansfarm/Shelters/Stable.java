@@ -6,17 +6,19 @@ import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import java.util.ArrayList;
 
 public class Stable extends Shelter{
-    public static ArrayList<Horse> numOfHorse = new ArrayList<Horse>(10);
+    public static ArrayList<Horse> numOfHorse = new ArrayList<>();
 
     public void Horse(){
-        this.numOfHorse = new ArrayList<>();
+        numOfHorse = new ArrayList<>();
     }
 
-    public ArrayList<Horse> getNumOfHorse(){
-        return numOfHorse;
-    }
+//    public ArrayList<Horse> getNumOfHorse(){
+//        return numOfHorse;
+//    }
 
     public void addHorse(Horse horse){
-        numOfHorse.add(horse);
+        for (int i = 0; i < 10; i++) {
+            numOfHorse.add(horse);
+        }
     }
 }
