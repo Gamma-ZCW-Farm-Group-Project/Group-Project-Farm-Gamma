@@ -5,6 +5,5 @@ import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import java.util.ArrayList;
 
 public interface Eater {
-    // Eater? I hardly know her!
     public void eat(ArrayList<Edible> e);
 }

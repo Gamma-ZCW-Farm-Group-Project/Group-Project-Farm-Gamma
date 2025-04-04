@@ -7,24 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Crop implements Produce {
-    private boolean hasBeenFertalized= false;
+    private boolean fertilized = false;
     private boolean hasBeenHarvested= false;
 
-    public void fertalize(){
-        hasBeenFertalized=true;
+    public void fertilize() {
+        this.fertilized = true;
     }
-    public void Harvested(){
-        hasBeenHarvested=true;
-    }
-
-    public boolean hasBeenFertilized() {
-        return hasBeenFertalized;
+    public void harvested(){
+        this.hasBeenHarvested=true;
     }
 
-    public boolean hasBeenHarvested() {
-        return hasBeenHarvested;
+    public boolean isFertilized() {
+        return fertilized;
     }
-    public void yield(ArrayList<Edible> corn) {
+
+    public void yield(ArrayList<Edible> item) {
 
     }
 

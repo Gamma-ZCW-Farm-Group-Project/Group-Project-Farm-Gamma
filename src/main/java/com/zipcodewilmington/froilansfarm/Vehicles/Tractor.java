@@ -12,6 +12,7 @@ public class Tractor implements FarmVehicle, NoiseMaker, RideAble {
     private boolean isHarvesting = false;
     private boolean isInUse = false;
     private String operator;
+    private boolean mounted=false;
 
     // Constructor for Tractor class
     public Tractor() {
@@ -19,6 +20,15 @@ public class Tractor implements FarmVehicle, NoiseMaker, RideAble {
         this.isHarvesting = false;
         this.isInUse = false;
         this.operator = null;
+    }
+    public void mount(){
+        mounted=true;
+    }
+    public void dismount(){
+        mounted=false;
+    }
+    public boolean isMounted(){
+        return mounted;
     }
 
     // Check if the tractor is harvesting any crops (returns true if harvesting)
@@ -55,7 +65,7 @@ public class Tractor implements FarmVehicle, NoiseMaker, RideAble {
         // Logic to check if the tractor is operating based on the field conditions (e.g., harvest status)
         for (CropRow row : field.getCropRows()) {
             for (Crop crop : row.getCrops()) {
-                if (crop.hasBeenHarvested()) {
+                if (crop.isFertilized()) {
                     return false;
                 }
             }

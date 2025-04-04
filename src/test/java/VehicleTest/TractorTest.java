@@ -17,39 +17,39 @@ public class TractorTest {
         tractor = new Tractor();  // Create a new Tractor instance
         field = new Field();      // Create a new Field instance
 
-        // Create CropRows
-        CropRow cornRow = new CropRow();
-        CropRow tomatoRow = new CropRow();
-
-
-
-        // Add rows to the field
-        field.addCropRow(cornRow);
-        field.addCropRow(tomatoRow);
+//        // Create CropRows
+//        CropRow cornRow = new CropRow();
+//        CropRow tomatoRow = new CropRow();
+//
+//
+//
+//        // Add rows to the field
+//        field.addCropRow(cornRow);
+//        field.addCropRow(tomatoRow);
     }
 
-    // Test for checking if the tractor can harvest crops
+    // tractor can harvest crops
     @Test
     public void testOperate() {
         tractor.operate();
         assertTrue(tractor.isOperating(field), "The tractor should be operating after the operate method is called.");
     }
 
-    // Test for checking if the tractor is harvesting
+    //tractor is harvesting
     @Test
     public void testIsHarvesting() {
         tractor.harvest();
-        assertTrue(tractor.isHarvesting(), "The tractor should be harvesting after calling the harvest method.");
+        assertTrue(tractor.isHarvesting());
     }
 
-    // Test for checking if the tractor can be ridden
+    // Test if tractor can be ridden
     @Test
     public void testRide() {
         String operator = "Froilan";
         Object result = tractor.ride(operator);
 
         // Check if the operator is correctly assigned
-        assertEquals(operator, result, "The operator should be 'Farmer John' when the tractor is ridden.");
+        assertEquals(operator, result);
     }
 
     // Test for checking the noise the tractor makes
@@ -58,6 +58,16 @@ public class TractorTest {
         String noise = tractor.makeNoise();
         assertEquals("Vroom", noise, "The tractor should make the noise 'Vroom'.");
     }
-
+@Test
+    public void testMount() {
+    tractor.mount();
+    assertTrue(tractor.isMounted());
+    }
+    @Test
+    public void testDismount() {
+        tractor.mount();
+        tractor.dismount();
+        assertFalse(tractor.isMounted());
+    }
 
 }
