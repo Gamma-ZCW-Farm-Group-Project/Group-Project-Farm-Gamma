@@ -1,4 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Edibles;
 
-public class Corn {
+import java.util.ArrayList;
+
+public class Corn extends Edible {
+    private boolean isFertilized;
+    private boolean isHarvested;
+    public Corn(){}
+    public ArrayList<Corn> cornList = new ArrayList<>();
 }

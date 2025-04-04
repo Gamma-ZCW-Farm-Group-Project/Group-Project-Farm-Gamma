@@ -1,30 +1,32 @@
 package com.zipcodewilmington.froilansfarm.Field;
 
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
-public class Crop{
-    private boolean hasBeenFertalized= false;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Crop implements Produce {
+    private boolean fertilized = false;
     private boolean hasBeenHarvested= false;
 
-    public void Fertalized(){
-        hasBeenFertalized=true;
+    public void fertilize() {
+        this.fertilized = true;
     }
-    public void Harvested(){
-        hasBeenHarvested=true;
-    }
-
-    public boolean hasBeenFertalized() {
-        return hasBeenFertalized;
+    public void harvest(){
+        this.hasBeenHarvested=true;
     }
 
-    public boolean hasBeenHarvested() {
+    public boolean isFertilized() {
+        return fertilized;
+    }
+
+    public boolean isHarvested() {
         return hasBeenHarvested;
     }
 
-//    @Override
-//    public void yield() {
-//
-//
-//    }
+    public void yield(ArrayList<Edible> item) {
+
+    }
 
 }

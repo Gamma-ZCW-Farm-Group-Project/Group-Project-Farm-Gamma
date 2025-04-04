@@ -1,5 +1,6 @@
 package VehicleTest;
 
+import com.zipcodewilmington.froilansfarm.Field.*;
 import com.zipcodewilmington.froilansfarm.Vehicles.CropDuster;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
@@ -12,26 +13,49 @@ public class CropdusterTest {
     class CropDusterTest {
 
         private CropDuster cropDuster;
+        private Field field;
+
 
         @BeforeEach
         void setUp() {
             cropDuster = new CropDuster();
+            field = new Field();
+
+            CropRow cornRow = new CropRow();
+            CropRow tomatoRow = new CropRow();
+
+
+            field.addCropRow(cornRow);
+            field.addCropRow(tomatoRow);
         }
 
         @Test
-        void testFly() {
-            cropDuster.fly();
-            assertTrue(cropDuster.isFlying(), "CropDuster should be flying");
+        public void testMount() {
+            CropDuster.mount();
+            assertTrue(CropDuster.isMounted(), "The CropDuster should be mounted after calling mount().");
         }
 
+        // Test for dismounting the Tractor
         @Test
-        void testFertilize() {
-            try {
-                cropDuster.fertilize();
-            } catch (Exception e) {
-                fail("Fertilize method threw an exception: " + e.getMessage());
-            }
+        public void testDismount() {
+            CropDuster.mount();  // Mount first
+            CropDuster.dismount();  // Then dismount
+            assertFalse(CropDuster.isMounted());
         }
+        @Test
+        public void testIsFlying() {
+            cropDuster.mount();  // Mount the CropDuster
+            boolean flyResult = cropDuster.fly();  // Call fly on the instance
 
+            //  not already flying
+            assertTrue(flyResult);
+
+            // now flying
+            assertTrue(cropDuster.isFlying());
+
+            // flying
+            flyResult = cropDuster.fly();  //  fly again
+            assertTrue(flyResult);
+        }
     }
 }
