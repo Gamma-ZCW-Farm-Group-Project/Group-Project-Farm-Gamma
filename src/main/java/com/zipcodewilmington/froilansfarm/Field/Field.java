@@ -3,9 +3,12 @@ package com.zipcodewilmington.froilansfarm.Field;
 import java.util.ArrayList;
 
 public class Field {
-    public ArrayList<Crop> getCropRow;
-    private ArrayList<CropRow> cropRows = new ArrayList<>();
-    private Field field;
+    private ArrayList<CropRow> cropRows;
+
+    public Field(){
+        this.cropRows=new ArrayList<>();
+
+    }
 
     public void addCropRow(CropRow row){
         cropRows.add(row);

@@ -13,12 +13,16 @@ public class Crop implements Produce {
     public void fertilize() {
         this.fertilized = true;
     }
-    public void harvested(){
+    public void harvest(){
         this.hasBeenHarvested=true;
     }
 
     public boolean isFertilized() {
         return fertilized;
+    }
+
+    public boolean isHarvested() {
+        return hasBeenHarvested;
     }
 
     public void yield(ArrayList<Edible> item) {

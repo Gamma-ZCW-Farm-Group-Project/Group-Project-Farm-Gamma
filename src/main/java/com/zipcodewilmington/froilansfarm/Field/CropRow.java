@@ -5,6 +5,7 @@ import java.util.List;
 
 public class CropRow {
         private List<Crop> crops;
+
         public void cropRow(){
             this.crops=new ArrayList<>();
         }

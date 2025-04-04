@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Field;
 
-public class TomatoPlant {
+public class TomatoPlant extends Crop {
     public boolean hasBeenFertilized() {
         return false;
     }
