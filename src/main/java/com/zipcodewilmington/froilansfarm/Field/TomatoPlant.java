@@ -24,4 +24,8 @@ public class TomatoPlant extends Crop {
             tomato.add(new Edible());  // Assuming tomato is a subclass of Edible
         }
     }
+
+    public boolean hasBeenHarvested() {
+        return hasBeenHarvested;
+    }
 }
