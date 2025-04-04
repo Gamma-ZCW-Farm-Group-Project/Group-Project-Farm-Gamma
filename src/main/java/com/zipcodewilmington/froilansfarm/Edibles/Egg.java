@@ -1,10 +1,12 @@
 package com.zipcodewilmington.froilansfarm.Edibles;
 
-public class Egg extends Edible {
-    public boolean isEdible() {
-        return false;
-    }
+import java.util.ArrayList;
 
-    public void fertilized() {
-    }
+public class Egg extends Edible {
+
+
+    private boolean isHarvested = false;
+    private boolean isFertilized = false;
+    public Egg(){}
+    public ArrayList<Egg> eggList = new ArrayList<>();
 }

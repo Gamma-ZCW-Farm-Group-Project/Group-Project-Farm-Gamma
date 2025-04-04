@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 
+import com.zipcodewilmington.froilansfarm.Edibles.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
@@ -14,7 +15,7 @@ public class Horse extends Animal implements Eater, NoiseMaker, Rider {
     }
 
     @Override
-    public void eat() {
+    public void eat(ArrayList<Edible> e) {
 
     }
 
