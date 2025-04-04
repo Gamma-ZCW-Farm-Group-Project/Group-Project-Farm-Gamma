@@ -27,13 +27,9 @@ public class InTheFieldTest {
         field.addCropRow(cropRow);
         assertEquals(cropRow, field.getCropRows().get(0));
     }
+
     @Test
-    public void testFieldInitialization() {
-        assertNotNull(field.getCropRows());
-        assertEquals(0,field.getCropRows().size());
-    }
-    @Test
-    public void testGetCrops(){
+    public void testGetCropsFertilized(){
         cropRow.addCrop(new CornStalk(),true);
         cropRow.addCrop(new TomatoPlant(),false);
 

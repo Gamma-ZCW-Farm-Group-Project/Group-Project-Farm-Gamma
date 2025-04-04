@@ -28,7 +28,7 @@ public class CornStalkTest {
     public void testYieldCorn(){
         cornStalk.fertilize();//fertilize corn stalk
         ArrayList<Edible> corn= new ArrayList<>();
-        cornStalk.yeild(corn);
+        cornStalk.yield(corn);
         assertEquals(1,corn.size());
     }
     @Test

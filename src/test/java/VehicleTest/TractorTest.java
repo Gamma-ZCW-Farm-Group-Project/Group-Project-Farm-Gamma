@@ -16,16 +16,6 @@ public class TractorTest {
     public void setUp() {
         tractor = new Tractor();  // Create a new Tractor instance
         field = new Field();      // Create a new Field instance
-
-//        // Create CropRows
-//        CropRow cornRow = new CropRow();
-//        CropRow tomatoRow = new CropRow();
-//
-//
-//
-//        // Add rows to the field
-//        field.addCropRow(cornRow);
-//        field.addCropRow(tomatoRow);
     }
 
     // tractor can harvest crops

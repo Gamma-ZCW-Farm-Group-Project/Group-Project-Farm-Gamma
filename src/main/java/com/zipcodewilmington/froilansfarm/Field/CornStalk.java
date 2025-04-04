@@ -27,9 +27,9 @@ public class CornStalk extends Crop {
         return fertilized;
     }
     // Yield corn (add it to the passed ArrayList)
-    public void yeild(ArrayList<Edible> corn) {
+    public void yield(ArrayList<Edible> corn) {
         if (!hasBeenHarvested&&fertilized) {
-            corn.add(new Edible());  // Assuming Corn is a subclass of Edible
+            corn.add(new Edible());  // Corn is a subclass of Edible
         }
     }
 }
